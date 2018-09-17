@@ -17,11 +17,23 @@ window.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    //#2
+    //Created event listener with button id from html. Displayed value from text input into an alert.
+    document.getElementById('btnInput').addEventListener("click", function () {
+        t = document.getElementById('txtInput');
+        alert(t.value);
+    });
 
 
-    function myFunction() {
-        alert("I am an alert box!");
-    }
+
+
+
+
+
+
+
+
+
 
 
 });
