@@ -3,31 +3,69 @@ $(document).ready(function () {
 
     //#1
     // create the button
-    // var button = document.createElement("button");
-    // button.innerHTML = "Do Something";
+    let b = $('<button>Click!</button>');
+    //append button to body
+    $('body').append(b);
+    //button event handler
+    $(b).click(function () {
+        //message alert after button clicked
+        alert('Clicked!');
+    });
 
-    // append the button to the page
-    //var body = document.getElementsByTagName("body")[0];
-    // body.appendChild(button);
+    //#2
+    //create event handler and take input value from html and display in alert
+    $('#btnInput').click(function () {
+        let txt = $('#txtInput').val();
+        alert(txt);
+    });
 
-    //add event handler
-    //button.addEventListener("click", function () {
-    // alert("You clicked!");
+    //#3
+
+    //get div from html
+    let d = $('#test');
+
+    //TESTING: move over div to change background color
+    // $(d).moveover(function(){
+    //  $(this).css('background-color', 'gray');
+    // }, function(){
+    //$(this).css('background-color', 'pink');
     // });
 
 
-    let b = $('<button>Click!</button>');
-    $('body').append(b);
+    //TESTING: move over div to change background color
+    // $(d).mouseout(function(){
+    // $(this).css('background-color', 'pink');
+    //}, function(){
+    // $(this).css('background-color', 'pink');
+    // });
 
-    $(b).click (function (){
 
-        alert ('Clicked!');
-
+    //move over to change background color then remove color on mouseout
+    $(d).mouseover(function () {
+        $(d).css('background-color', 'yellow');
+    });
+    $(d).mouseout(function () {
+        $(d).css('background-color', '');
     });
 
+    //#4
+    //get p from html
+    let p = $('#para');
 
+    //create random color function
+    function randomColor() {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        let color = `rgb(${r},${g},${b})`;
+        return color;
+    }
 
-
+    //event handler to p element that calls the randomColor function
+    $(p).click(function (event) {
+        //event.target.style.color = 'red';
+        event.target.style.color = randomColor();
+    });
 
 
 
