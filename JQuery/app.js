@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     //#1
     // create the button
-    let b = $('<button>Click!</button>');
+    let b = $('<button>Click First!</button>');
     //append button to body
     $('body').append(b);
     //button event handler
@@ -61,12 +61,74 @@ $(document).ready(function () {
         return color;
     }
 
-    //event handler to p element that calls the randomColor function
+    //event handler to p element-calls the randomColor function
     $(p).click(function (event) {
         //event.target.style.color = 'red';
         event.target.style.color = randomColor();
     });
 
+    //#5 
+    //get button from html
+    let btn = $('#btnClick');
+    //event handler on button to create a div, create a span and display first and last name in span.
+    $(btn).click(function () {
+        // create div
+        let d = $('<div></div>');
+        // create span w/name
+        let s = $('<span>Paula Suarez</span>');
+        //append span to div
+        $(d).append(s);
+        //append div to body
+        $('body').append(d);
+    });
+
+
+    //#6
+    //create an array 10 friends names
+    let person = [
+        {
+            name: 'Ken'
+
+        },
+        {
+            name: 'Meredith'
+
+        },
+        {
+            name: 'Hernan'
+        },
+        {
+            name: 'Ericka'
+
+        },
+        {
+            name: 'Olivia'
+
+        },
+        {
+            name: 'Ashley'
+
+        },
+        {
+            name: 'James'
+
+        },
+        {
+            name: 'John'
+
+        },
+        {
+            name: 'Sharon'
+
+        },
+        {
+            name: 'Patricia'
+
+        },
+    ]
+
+    //get button from html
+    let btn1 = $('#btnClick1');
 
 
 

@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     //#5
-    //Get p from html by id.
+    //Get button from html by id.
     let b = document.getElementById('btnClick');
 
     b.addEventListener('click', function () {
