@@ -53,8 +53,17 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     //Created function to randomly generate color.
+
+    //TESTING: function randomColor() {
+    //let color = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+    //return color;
+    //}
+
     function randomColor() {
-        let color = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        let color = `rgb(${r},${g},${b})`;
         return color;
     }
 
@@ -77,7 +86,7 @@ window.addEventListener('DOMContentLoaded', function () {
         //Appended div container to body.
         document.body.appendChild(divContainer);
         //testing function
-        console.log('true');
+        //console.log('true');
 
     });
 

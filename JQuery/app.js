@@ -85,7 +85,7 @@ $(document).ready(function () {
 
     //#6
     //create an array 10 friends names
-    let person = [
+    let people = [
         {
             name: 'Ken'
 
@@ -127,17 +127,14 @@ $(document).ready(function () {
         },
     ]
 
-    //get button from html
-    let btn1 = $('#btnClick1');
-
-
-
-
-
-
-
-
-
+    //event handler on button
+	$('#btnClick1').on("click", function(){
+        //for each loop
+		people.forEach(function(people){
+            //add each name of the array to an LI then append that LI to the UL 
+			$('#list').append('<li>' + people.name + '</li>');
+		});
+	});
 
 
 });
